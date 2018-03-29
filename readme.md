@@ -16,7 +16,7 @@ This repository assumes you have:
 * Node
 * Yarn
 
-All other tools are build into the project.
+All other tools are built into the project.
 
 ### Installing
 
