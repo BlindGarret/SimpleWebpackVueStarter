@@ -14,7 +14,12 @@ export default {
   data: function() {
     return {
       message: "Hello World!"
-    };
+    }
+  },
+  computed : {
+    herp: function() { 
+      return message.split('').reverse().join('')
+    }
   }
 };
 </script>
