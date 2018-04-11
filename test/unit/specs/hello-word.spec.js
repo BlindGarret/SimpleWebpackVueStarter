@@ -1,22 +1,22 @@
-import Vue from 'vue';
 import HelloWorld from '../../../src/components/hello-world.vue';
+import { describe } from 'mocha'
+import { expect } from 'chai'
+import { shallow } from '@vue/test-utils'
 
 describe('HelloWorld', () => {
-  it('should set correct message value', () => {
-    it('has a created hook', () => {
-      expect(typeof HelloWorld.created).toBe('function')
+  describe('should set correct message value', () => {
+    it('has data to be read', () => {      
+      expect(typeof HelloWorld.data).to.equal('function')
     })
-
+    
     it('sets the correct default data', () => {
-      expect(typeof HelloWorld.data).toBe('function')
-      const defaultData = HellowWorld.data;
-      expect(defaultData.message).toBe('Hello World!')
+      const defaultData = HelloWorld.data();
+      expect(defaultData.message).to.equal('Hello World!')
     })
 
     it('renders the correct message', () => {
-      const Constructor = Vue.extend(HelloWorld)
-      const vm = new Constructor().$mount()
-      expect(vm.$el.textContent).toBe('Hello World!')
+      const component = shallow(HelloWorld)
+      expect(component.vm.$el.textContent).to.equal('Hello World!')
     })
   })
 })
