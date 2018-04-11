@@ -8,7 +8,8 @@
     "build": "webpack --mode production",
     "lint": "./node_modules/.bin/eslint src/**",
     "test": "node_modules/.bin/mocha-webpack --require test/setup.js --webpack-config webpack.config-test.js \"test/**/*.spec.js\"",
-    "test:watch": "node_modules/.bin/mocha-webpack --require test/setup.js --webpack-config webpack.config-test.js \"test/**/*.spec.js\" --watch"
+    "test:watch": "yarn run test -- --watch",
+    "test:debug": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config-debugtest.js --inline"
   },
   "license": "MIT",
   "devDependencies": {
@@ -33,6 +34,7 @@
     "jsdom-global": "^3.0.2",
     "mini-css-extract-plugin": "^0.2.0",
     "mocha": "^5.0.5",
+    "mocha-loader": "^1.1.3",
     "mocha-webpack": "2.0.0-beta.0",
     "node-sass": "^4.8.3",
     "requirejs": "^2.3.5",

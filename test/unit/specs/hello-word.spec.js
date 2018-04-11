@@ -1,5 +1,4 @@
 import HelloWorld from '../../../src/components/hello-world.vue';
-import { describe } from 'mocha'
 import { expect } from 'chai'
 import { shallow } from '@vue/test-utils'
 
