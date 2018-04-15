@@ -1,10 +1,9 @@
 import { expect } from 'chai'
 import { shallow, createLocalVue } from '@vue/test-utils'
-import { describe, it, beforeEach } from 'mocha'
 import sinon from 'sinon'
 import Vuex from 'vuex'
 
-import startMessageUpdateTimer from '../../../src/workers/update-message'
+import startMessageUpdateTimer_ from '../../../src/workers/update-message'
 import s_ from '../../../src/store'
 
 import HelloWorld from '../../../src/components/hello-world.vue'
