@@ -6,7 +6,7 @@
     "serve": "cross-env NODE_ENV=development ./node_modules/.bin/webpack-dev-server --inline --hot",
     "dev": "./node_modules/.bin/webpack --mode development",
     "build": "./node_modules/.bin/webpack --mode production",
-    "lint": "./node_modules/.bin/eslint src/**",
+    "lint": "./node_modules/.bin/eslint src/** test/**",
     "test": "./node_modules/.bin/mocha-webpack --require test/setup.js --webpack-config webpack.config-test.js \"test/**/*.spec.js\"",
     "test:watch": "yarn run test -- --watch",
     "test:debug": "cross-env NODE_ENV=development ./node_modules/.bin/webpack-dev-server --config webpack.config-debugtest.js --inline",
