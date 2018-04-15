@@ -1,4 +1,4 @@
-//import messageApi from '../../api/get-message-api'
+// import messageApi from '../../api/get-message-api'
 
 // initial state
 const state = {
@@ -12,7 +12,7 @@ const getters = {
 
 // actions
 const actions = {
-  reverse({commit, state}) {
+  reverse ({commit, state}) {
     const reversed = state.message.split('').reverse().join('')
     commit('setMessage', reversed)
   }
@@ -20,7 +20,7 @@ const actions = {
 
 // mutations
 const mutations = {
-  setMessage(state, message) {
+  setMessage (state, message) {
     state.message = message
   }
 }

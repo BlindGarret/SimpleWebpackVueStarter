@@ -28,6 +28,16 @@
   dependencies:
     samsam "1.3.0"
 
+"@vue/eslint-config-standard@^3.0.0-beta.6":
+  version "3.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@vue/eslint-config-standard/-/eslint-config-standard-3.0.0-beta.6.tgz#fe3b43dd12249fbf4e4352759848197093fdcc92"
+  dependencies:
+    eslint-config-standard "^11.0.0"
+    eslint-plugin-import "^2.9.0"
+    eslint-plugin-node "^6.0.1"
+    eslint-plugin-promise "^3.6.0"
+    eslint-plugin-standard "^3.0.1"
+
 "@vue/test-utils@^1.0.0-beta.13":
   version "1.0.0-beta.13"
   resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-1.0.0-beta.13.tgz#309dc50d2a55ac9facf781f62bbd236475ba5033"
@@ -2584,7 +2594,7 @@ eslint-plugin-node@^6.0.1:
     resolve "^1.3.3"
     semver "^5.4.1"
 
-eslint-plugin-promise@^3.7.0:
+eslint-plugin-promise@^3.6.0, eslint-plugin-promise@^3.7.0:
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.7.0.tgz#f4bde5c2c77cdd69557a8f69a24d1ad3cfc9e67e"
 

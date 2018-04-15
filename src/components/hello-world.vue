@@ -12,21 +12,19 @@ p {
 </style>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
-  name: "hello-world",
+  name: 'hello-world',
   computed: {
     ...mapGetters('helloMessage', {
       message: 'message'
     })
   },
   methods: {
-    reverse() {
-      this.$store.dispatch("helloMessage/reverse");
+    reverse () {
+      this.$store.dispatch('helloMessage/reverse')
     }
   }
-};
+}
 </script>
-
-
