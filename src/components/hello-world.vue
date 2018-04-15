@@ -1,5 +1,8 @@
 <template>
+  <div>
     <p>{{ message }}</p>
+    <button @click="reverse()">reverse</button>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -9,19 +12,19 @@ p {
 </style>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
-  name: "hello-world",
-  data: function() {
-    return {
-      message: "Hello World!"
-    }
+  name: 'hello-world',
+  computed: {
+    ...mapGetters('helloMessage', {
+      message: 'message'
+    })
   },
-  computed : {
-    herp: function() { 
-      return message.split('').reverse().join('')
+  methods: {
+    reverse () {
+      this.$store.dispatch('helloMessage/reverse')
     }
   }
-};
+}
 </script>
-
-

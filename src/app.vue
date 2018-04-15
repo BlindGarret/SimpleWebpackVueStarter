@@ -12,7 +12,7 @@ import HelloWorld from './components/hello-world.vue'
 export default {
   name: 'app',
   components: {
-      HelloWorld
+    HelloWorld
   }
 }
 </script>
