@@ -1,14 +1,17 @@
 // Mock API call
+import { Observable } from 'rxjs/Observable'
+
 
 const first = 'Hello World!'
 const second = 'Hello Again!'
 let useFirst = true;
 
 export default {
-  getMessage(callback) {
-    setTimeout(() => {
-      callback({message: useFirst ? first : second})
+  getMessage() {
+    return Observable.create(function (observer) {
       useFirst = !useFirst
-    }, 200)
+      observer.next({message: useFirst ? first : second})
+      observer.complete()
+    })
   }
 }
