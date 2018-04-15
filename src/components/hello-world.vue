@@ -17,13 +17,13 @@ import { mapGetters } from "vuex";
 export default {
   name: "hello-world",
   computed: {
-    ...mapGetters({
-      message: "message"
+    ...mapGetters('helloMessage', {
+      message: 'message'
     })
   },
   methods: {
     reverse() {
-      this.$store.dispatch("reverse");
+      this.$store.dispatch("helloMessage/reverse");
     }
   }
 };
